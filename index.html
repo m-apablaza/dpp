@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritura Académica - UDD Doctorado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efecto Matrix */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .matrix-bg canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #0f0;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+        }
+
+        .pill-blue {
+            background: #0000ff;
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        .pill-blue:hover {
+            box-shadow: 0 0 40px #00ffff, inset 0 0 20px #00ffff;
+            transform: scale(1.1);
+        }
+
+        .pill-red {
+            background: #ff0000;
+            border-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .pill-red:hover {
+            box-shadow: 0 0 40px #ff0000, inset 0 0 20px #ff0000;
+            transform: scale(1.1);
+        }
+
+        .question {
+            margin-top: 60px;
+            font-size: 16px;
+            opacity: 0.6;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px #0f0; }
+            50% { text-shadow: 0 0 40px #0f0, 0 0 60px #0f0; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 32px;
+            }
+            .subtitle {
+                font-size: 14px;
+            }
+            .pill {
+                width: 100px;
+                height: 100px;
+                font-size: 18px;
+            }
+            .buttons-container {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+
+    <div class="container">
+        <div class="title">ESCRITURA ACADÉMICA</div>
+        <div class="subtitle">Doctorado en Políticas Públicas | Universidad del Desarrollo</div>
+        
+        <div class="buttons-container">
+            <a href="curso.html" class="pill pill-blue">AZUL</a>
+            <a href="abstract.html" class="pill pill-red">ROJA</a>
+        </div>
+
+        <div class="question">¿Cuál elegirás?</div>
+    </div>
+
+    <script>
+        // Matrix effect
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * canvas.height;
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px Courier New';
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 50);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Construir un Abstract Académico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 30px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 4px solid #000;
+            padding-left: 15px;
+        }
+
+        .content {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .emphasis {
+            font-style: italic;
+        }
+
+        .structure-box {
+            border: 1px solid #000;
+            padding: 25px;
+            margin: 30px 0;
+            background: #f9f9f9;
+        }
+
+        .structure-step {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 14px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .example-box {
+            border: 1px solid #999;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fafafa;
+            font-size: 13px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .example-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-style: normal;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .checklist li {
+            padding-left: 30px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .dos-donts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .do-box, .dont-box {
+            border: 1px solid #000;
+            padding: 20px;
+            font-size: 13px;
+            text-align: justify;
+        }
+
+        .do-box {
+            border-left: 4px solid #00aa00;
+            background: #f0fff0;
+        }
+
+        .dont-box {
+            border-left: 4px solid #ff0000;
+            background: #fff0f0;
+        }
+
+        .box-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #000;
+        }
+
+        .back-button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .section-title {
+                font-size: 16px;
+            }
+            .content, .structure-step, .checklist {
+                font-size: 12px;
+            }
+            .dos-donts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Cómo Construir un Abstract Académico</div>
+            <div class="subtitle">Guía Práctica para Doctorando</div>
+        </div>
+
+        <div class="section-title">¿Qué es un Abstract?</div>
+        <div class="content">
+            <p>Un abstract es un resumen denso de tu investigación que permite a lectoras potenciales decidir rápidamente si el paper les interesa. No es una introducción acortada ni una lista de temas. Es una representación condensada de tu problema investigativo, tu abordaje y tus hallazgos principales. Típicamente tiene entre 150 y 250 palabras en investigación en políticas públicas.</p>
+            <p>El abstract es retórico: convence. No simplemente informa. Por eso debe ser preciso, específico y estar orientado a acción intelectual. Un buen abstract genera tensión: muestra que existe un problema sin resolver, que hay una brecha en el conocimiento, y que tu investigación la aborda.</p>
+        </div>
+
+        <div class="section-title">Estructura del Abstract</div>
+        <div class="structure-box">
+            <div class="structure-step">
+                <span class="step-number">Paso 1: Contexto y Problema (2-3 oraciones)</span>
+                Sitúa el problema en un contexto específico. No digas "la desigualdad es un problema", sino "en Chile, la brecha salarial de género en el sector financiero alcanzó 35 por ciento en 2023, persistiendo después de dos décadas de políticas de igualdad". El contexto debe ser específico geográfica, temporal y temáticamente. Esto establece por qué el problema importa.
+            </div>
+
+            <div class="structure-step">
+                <span class="step-number">Paso 2: Brecha de Investigación (1-2 oraciones)</span>
+                Identifica qué se desconoce. ¿Qué han estudiado otros? ¿Qué falta? No digas "se sabe poco", sino "investigaciones previas han documentado que las políticas de licencia parental no cerraron la brecha de ingresos, pero se desconoce si esta inefectividad se debe a limitaciones en el diseño de la política o a barreras culturales en la promoción de mujeres dentro de firmas financieras". La brecha genera la pregunta investigativa.
+            </div>
+
+            <div class="structure-step">
+                <span class="step-number">Paso 3: Pregunta y Objetivo Investigativo (1-2 oraciones)</span>
+                Plantea tu pregunta específica y el objetivo de tu investigación. "Este estudio examina cómo las creencias sobre roles de género entre gerentes financieros median entre las políticas de licencia parental y los cambios reales en promoción de mujeres. Combinamos entrevistas con 45 gerentes de cinco bancos y análisis de datos de personal de 2015-2023".
+            </div>
+
+            <div class="structure-step">
+                <span class="step-number">Paso 4: Enfoque o Metodología Breve (1-2 oraciones)</span>
+                Describe muy brevemente tu abordaje. Suficiente para que el lector entienda cómo contestaste tu pregunta, pero no detalles técnicos exhaustivos. Menciona población, datos, periodo de tiempo si es relevante.
+            </div>
+
+            <div class="structure-step">
+                <span class="step-number">Paso 5: Hallazgos Principales (2-3 oraciones)</span>
+                Presenta tus resultados más importantes. No digas "encontramos resultados interesantes", sino "encontramos que gerentes con mayor exposición a mujeres en posiciones de liderazgo fuera del ámbito financiero mostraron probabilidad 2.3 veces mayor de promover mujeres internamente, independientemente de la política de licencia parental vigente durante su tenure".
+            </div>
+
+            <div class="structure-step">
+                <span class="step-number">Paso 6: Implicancias (1-2 oraciones)</span>
+                Explicita por qué tus hallazgos importan para políticas públicas, teoría, o práctica. "Estos hallazgos sugieren que intervenciones sobre igualdad de género en sector financiero deben dirigirse a cambiar percepciones sobre capacidades de liderazgo femenino, no solamente a ajustes en política de licencia parental".
+            </div>
+        </div>
+
+        <div class="section-title">Ejemplo de Abstract Efectivo</div>
+        <div class="example-box">
+            <div class="example-label">Ejemplo: Políticas de Igualdad de Género en Banca</div>
+            <p>En Chile, a pesar de dos décadas de políticas de licencia parental en el sector financiero, la brecha salarial de género entre gerentes permanece en 32 por ciento. Investigaciones previas documentan inefectividad de tales políticas, pero se desconoce si falla el diseño de la política o si barreras culturales internas bloquean su impacto. Este estudio examina cómo creencias sobre liderazgo femenino entre gerentes sénior median entre políticas institucionales y cambios reales en promoción de mujeres. Combinamos entrevistas en profundidad con 45 gerentes de cinco bancos principales con análisis de datos administrativos de personal (2015-2023). Encontramos que gerentes con mayor exposición previa a modelos de liderazgo femenino fuera del sector financiero mostraron probabilidad 2.3 veces mayor de promover mujeres, independiente de la política de licencia vigente. En contraste, gerentes educados exclusivamente dentro del sector financiero no respondieron a cambios de política. Estos hallazgos sugieren que intervenciones sobre igualdad de género en banca deben dirigirse a cambiar marcos mentales sobre capacidades de liderazgo, no solamente a ajustes técnicos en política de licencia parental.</p>
+        </div>
+
+        <div class="section-title">Lista de Verificación</div>
+        <ul class="checklist">
+            <li>¿Está claro qué problema público específico abordas, no general?</li>
+            <li>¿Explicitaste la brecha en conocimiento que justifica tu pregunta?</li>
+            <li>¿Tu pregunta investigativa es investigable, específica y original?</li>
+            <li>¿Describes brevemente tu abordaje metodológico?</li>
+            <li>¿Presentas hallazgos específicos, no generalizaciones vagas?</li>
+            <li>¿Explicitaste por qué importan tus hallazgos para políticas públicas o conocimiento?</li>
+            <li>¿El abstract tiene entre 150 y 250 palabras?</li>
+            <li>¿Cada oración comunica información nueva, sin repeticiones?</li>
+            <li>¿Evitaste jerga disciplinaria que no podrías explicar en dos palabras?</li>
+            <li>¿El abstract se lee como argumento coherente, no lista de puntos?</li>
+        </ul>
+
+        <div class="section-title">Errores Comunes y Cómo Evitarlos</div>
+        <div class="dos-donts">
+            <div class="do-box">
+                <div class="box-title">✓ Haz Esto</div>
+                <p>Sé específico: "en escuelas públicas de Iquique, 2021-2023" vs. "en educación pública"</p>
+                <p>Usa números: "36 por ciento", "5 años", "45 participantes"</p>
+                <p>Conecta hallazgos a políticas: "sugiere que programas de mentoría..."</p>
+                <p>Usa lenguaje activo: "encontramos" vs. "fue encontrado"</p>
+            </div>
+
+            <div class="dont-box">
+                <div class="box-title">✗ Evita Esto</div>
+                <p>Vaguedad: "es importante", "problemas significativos", "resultados interesantes"</p>
+                <p>Jerga innecesaria que requiere glosario</p>
+                <p>Detalles técnicos de análisis: "usamos regresión logística" sin mencionar qué preguntaste</p>
+                <p>Información que no aparece en el paper completo</p>
+            </div>
+        </div>
+
+        <div class="section-title">Proceso Iterativo</div>
+        <div class="content">
+            <p>Escribe tu primer abstract después de terminar una versión casi final de tu paper. Hazlo en borrador sucio: escribe todo lo que pienses que importa sin preocuparte por límite de palabras. Luego contrae. Cada frase que elimines debe ser porque información más importante ocupa ese espacio. Revisa al menos tres veces. Muéstraselo a un colega y pregunta: ¿Entendiste el problema? ¿Entendiste por qué es un problema? ¿Te gustaría leer el paper completo después de leer esto?</p>
+        </div>
+
+        <div class="section-title">Recursos Complementarios</div>
+        <div class="content">
+            <p>Swales, J. M. & Feak, C. B. (2012). "Academic Writing for Graduate Students". Ann Arbor: University of Michigan Press. Capítulo sobre abstracts contiene análisis de estructura en diferentes disciplinas.</p>
+            <p>Booth, W. C., Colomb, G. G., & Williams, J. M. (2008). "The Craft of Research". Chicago: University of Chicago Press. Págs. 248-249 sobre titulación y abstracts como síntesis de contribución.</p>
+        </div>
+
+        <a href="index.html" class="back-button">← Volver al Inicio</a>
+    </div>
+</body>
+</html>

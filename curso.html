@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritura Académica - Estructura del Curso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 30px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 4px solid #000;
+            padding-left: 15px;
+        }
+
+        .content {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .objectives-list {
+            text-align: justify;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .objectives-list li {
+            margin-bottom: 10px;
+            list-style-position: inside;
+        }
+
+        .ra-list {
+            text-align: justify;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .ra-list li {
+            margin-bottom: 12px;
+            list-style-position: inside;
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 13px;
+        }
+
+        .schedule th, .schedule td {
+            border: 1px solid #000;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .schedule th {
+            background: #f0f0f0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .session-link {
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .session-link:hover {
+            color: #003399;
+        }
+
+        .bibliography {
+            font-size: 13px;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .bibliography-item {
+            margin-bottom: 10px;
+            margin-left: 40px;
+            text-indent: -40px;
+        }
+
+        .readings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 12px;
+        }
+
+        .readings-table th, .readings-table td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .readings-table th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #000;
+        }
+
+        .back-button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .section-title {
+                font-size: 16px;
+            }
+            .content, .objectives-list, .ra-list, .bibliography, .readings-table {
+                font-size: 12px;
+            }
+            table {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Escritura Académica</div>
+            <div class="subtitle">Doctorado en Políticas Públicas</div>
+            <div class="subtitle">Universidad del Desarrollo</div>
+        </div>
+
+        <div class="section-title">Descripción</div>
+        <div class="content">
+            <p>Este curso introduce a doctorando en investigación de políticas públicas a la construcción y comunicación de argumentación académica rigurosa. Ubicado en el primer semestre del programa, prepara a los estudiantes para el hito evaluativo "Proyecto de Tesis", donde deben presentar una pregunta investigable, un estado del arte fundamentado, y un diseño metodológico coherente.</p>
+            <p>No es un curso de redacción ni ortografía, sino de pensamiento investigativo expresado con claridad. Aborda simultáneamente cuestiones epistemológicas, metodológicas, y retóricas en la comunicación académica.</p>
+        </div>
+
+        <div class="section-title">Objetivos Específicos</div>
+        <ul class="objectives-list">
+            <li>Formular preguntas de investigación rigurosas, investigables y relevantes que aborden problemas públicos complejos desde perspectivas interdisciplinarias.</li>
+            <li>Construir argumentos académicos coherentes donde evidencia, justificaciones y conclusiones se conectan de modo lógico y transparente.</li>
+            <li>Anticipar y responder fundamentadamente a objeciones potenciales, demostrando pensamiento crítico maduro.</li>
+            <li>Diseñar estrategias metodológicas rigurosas que sean transparentes sobre sus supuestos, limitaciones y decisiones técnicas.</li>
+            <li>Integrar principios de ética, integridad científica y responsabilidad pública en todas las dimensiones del proceso investigativo.</li>
+            <li>Comunicar investigación con claridad y rigor, adaptando lenguaje a audiencias académicas, gubernamentales y ciudadanas.</li>
+            <li>Participar en ciclos iterativos de retroalimentación, revisando organización y argumentación de modo estratégico.</li>
+        </ul>
+
+        <div class="section-title">Resultados de Aprendizaje</div>
+        <ul class="ra-list">
+            <li><strong>RA1:</strong> Formular una pregunta de investigación original, específica e investigable para un problema público, identificando la brecha en el conocimiento.</li>
+            <li><strong>RA2:</strong> Construir un estado del arte donde literatura se organiza como argumento coherente, demostrando pensamiento crítico sobre debates disciplinarios.</li>
+            <li><strong>RA3:</strong> Diseñar una estrategia metodológica rigurosa que conecta pregunta de investigación con datos, métodos y procedimientos analíticos.</li>
+            <li><strong>RA4:</strong> Estructurar argumentos académicos donde claims están respaldados por razones, evidencia y justificaciones explícitos, conectados lógicamente.</li>
+            <li><strong>RA5:</strong> Anticipar objeciones potenciales y formular respuestas fundamentadas, diferenciando críticas válidas de argumentos débiles.</li>
+            <li><strong>RA6:</strong> Comunicar investigación con precisión conceptual, usando evidencia de modo honesto, y adaptando lenguaje según audiencia.</li>
+            <li><strong>RA7:</strong> Integrar consideraciones éticas, de integridad científica y responsabilidad pública en formulación de pregunta y diseño metodológico.</li>
+            <li><strong>RA8:</strong> Producir un primer borrador de paper académico (8-12 páginas) que demuestre progreso hacia el hito Proyecto de Tesis.</li>
+        </ul>
+
+        <div class="section-title">Contenido: Cronograma de 15 Sesiones</div>
+        <table class="schedule">
+            <thead>
+                <tr>
+                    <th>Sesión</th>
+                    <th>Fecha</th>
+                    <th>Módulo y Tema</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>24 ago</td>
+                    <td><a href="sesion1.html" class="session-link">Identidad académica y lectura crítica</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>31 ago</td>
+                    <td>Meta-lectura y análisis argumentativo</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>7 sep</td>
+                    <td>Problemas públicos complejos e interdisciplinariedad</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>14 sep</td>
+                    <td>Búsqueda sistemática de literatura y estado del arte</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>21 sep</td>
+                    <td>Originalidad, pertinencia y contribución</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>28 sep</td>
+                    <td>Ética, integridad científica y responsabilidad pública</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>5 oct</td>
+                    <td>Operacionalización de conceptos</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>12 oct</td>
+                    <td>Metodología rigurosa y justificación de diseño</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>19 oct</td>
+                    <td>Estructura argumentativa y warrants</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>26 oct</td>
+                    <td>Anticipación de objeciones y argumentación madura</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>2 nov</td>
+                    <td>Planificación y outline</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>9 nov</td>
+                    <td>Representación visual de datos</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>16 nov</td>
+                    <td>Títulos y abstracts</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>23 nov</td>
+                    <td>Revisión estratégica e iterativa</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>30 nov</td>
+                    <td>Primer borrador completo y reflexión</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">Bibliografía Obligatoria</div>
+        <div class="bibliography">
+            <div class="bibliography-item">Booth, W. C., Colomb, G. G., & Williams, J. M. (2008). The Craft of Research (3ª ed.). Chicago: University of Chicago Press.</div>
+            <div class="bibliography-item">Orwell, G. (1946). Politics and the English Language. Horizon Magazine.</div>
+            <div class="bibliography-item">Universidad del Desarrollo (2024). Doctorado en Políticas Públicas: Análisis del Perfil de Egreso y Matriz de Tributación.</div>
+        </div>
+
+        <div class="section-title">Bibliografía Complementaria</div>
+        <div class="bibliography">
+            <div class="bibliography-item">Angrist, J. D. & Pischke, J. S. (2009). Mostly Harmless Econometrics. Princeton: Princeton University Press.</div>
+            <div class="bibliography-item">Becker, H. S. (2007). Writing for Social Scientists (2ª ed.). Chicago: University of Chicago Press.</div>
+            <div class="bibliography-item">Lipson, C. (2011). Cite Right (2ª ed.). Chicago: University of Chicago Press.</div>
+            <div class="bibliography-item">Swales, J. M. & Feak, C. B. (2012). Academic Writing for Graduate Students (3ª ed.). Ann Arbor: University of Michigan Press.</div>
+            <div class="bibliography-item">Toulmin, S. E. (1958). The Uses of Argument. Cambridge: Cambridge University Press.</div>
+            <div class="bibliography-item">Varian, H. R. (1992). How to Build an Economic Model in Your Spare Time. UCEI Working Papers.</div>
+        </div>
+
+        <div class="section-title">Lecturas por Sesión</div>
+        <table class="readings-table">
+            <thead>
+                <tr>
+                    <th>Sesión</th>
+                    <th>Lecturas Obligatorias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Booth et al. (2008). Cap. 2: 'Connecting with Your Reader' (págs. 16-27)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Booth et al. (2008). Cap. 7: 'Making Good Arguments' (págs. 108-118)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>UDD (2024). Justificación del Programa: naturaleza multidimensional de problemas públicos</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Booth et al. (2008). Cap. 3-4: 'From Topics to Questions' a 'From Questions to a Problem' (págs. 35-67)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Booth et al. (2008). Cap. 1: 'Thinking in Print' (págs. 9-14). Angrist & Pischke (2009). Cap. 1: 'Questions of Interest' (págs. 1-22)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Booth et al. (2008). Cap. 5: 'Ethics of Using People as Sources' (págs. 81-83). Orwell (1946). Politics and the English Language.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Booth et al. (2008). Cap. 8: 'Making Claims' (págs. 120-122)</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Booth et al. (2008). Cap. 9: 'Assembling Reasons and Evidence' (págs. 130-137). Angrist & Pischke. Cap. 2: 'The Experimental Ideal' (págs. 23-67)</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Booth et al. (2008). Cap. 11: 'Warrants' (págs. 152-162). Toulmin (1958). The Uses of Argument.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Booth et al. (2008). Cap. 10: 'Acknowledgments and Responses' (págs. 139-150)</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Booth et al. (2008). Cap. 12: 'Planning' (págs. 177-186). Becker (2007). Capítulo sobre organización y estructura.</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Booth et al. (2008). Cap. 15: 'Communicating Evidence Visually' (págs. 213-230)</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Booth et al. (2008). 'Titles' y 'Abstracts' (págs. 211-212, 248-249). Swales & Feak (2012). Cap. sobre abstracts.</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Booth et al. (2008). Cap. 14: 'Revising Your Organization and Argument' (págs. 203-211). Becker (2007). 'Rewriting'.</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Booth et al. (2008). Cap. 13: 'Drafting Your Report' (págs. 191-197). Lipson (2011). Cap. introductorio sobre por qué citamos.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="index.html" class="back-button">← Volver</a>
+    </div>
+</body>
+</html>
