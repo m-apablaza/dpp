@@ -1,0 +1,511 @@
+---
+title: "IDENTIDAD ACADÉMICA Y <span style='color: #e67e22;'>LECTURA CRÍTICA</span>"
+subtitle: "Construir tu posición como investigador"
+author: "ESCRITURA ACADÉMICA"
+format:
+  revealjs:
+    theme: simple
+    logo: logo.png
+    footer: "Mauricio Apablaza - Sesión 1 - Identidad Académica"
+    css: styles.css
+    center: true
+---
+
+# IDENTIDAD ACADÉMICA
+
+## ¿Qué significa ser académico?
+
+Ser académico no es un título que recibes. Es una identidad que **construyes** haciendo trabajo académico:
+
+- Leyendo críticamente
+- Escribiendo para audiencias especializadas
+- Posicionándote dentro de debates
+
+**Diferencia académica:**
+
+"Este programa tuvo resultados mixtos" ← genérico, evasivo
+
+"Este programa redujo desnutrición en 4 puntos porcentuales pero no afectó escolaridad" ← específico, medible, testeable
+
+
+# Dónde presentarse: <span style='color: #e67e22;'>Plataformas</span>
+
+## La fragmentación del investigador
+
+No tienes un perfil. Tienes 5 que funcionan simultáneamente:
+
+1. **Portal de la conferencia** (Call for Papers)
+2. **LinkedIn** (Red profesional)
+3. **ORCID + Scholar** (Vinculación de publicaciones)
+4. **ResearchGate** (Comunidad académica)
+5. **Portal Investigador ANID** (Reportes nacionales)
+
+Cada uno tiene audiencia distinta y requiere aproximación diferente.
+
+
+# Call for Papers: <span style='color: #e67e22;'>La Conferencia</span>
+
+## Lo que ve el comité evaluador
+
+::: columns
+::: {.column width="50%"}
+❌ **Malo:**
+
+"Investigo políticas educativas y temas relacionados con desarrollo."
+
+*Genérico. Sin foco.*
+:::
+::: {.column width="50%"}
+✅ **Bueno:**
+
+"Especialista en evaluación causal de educación técnica. Publicado en *Policy Studies* sobre retorno salarial sectorial. Actualmente coordina Fondecyt sobre género y movilidad ocupacional en educación superior técnica."
+
+*Específico. Metodología. Verificable.*
+:::
+:::
+
+**Tips:** Máx. 150 palabras. Sé específico. Incluye publicación reciente. Termina con impacto.
+
+
+# LinkedIn: La Vitrina <span style='color: #e67e22;'>Profesional</span>
+
+## Perfil de investigador
+
+::: columns
+::: {.column width="50%"}
+❌ **Malo:**
+
+"Profesional en educación. Apasionado por hacer diferencia. Abierto a oportunidades."
+
+*Podría ser cualquiera.*
+:::
+::: {.column width="50%"}
+✅ **Bueno:**
+
+"Investigo educación con métodos cuantitativos. Fondecyt 2023 en género y educación técnica. Publicaciones en *Education Policy Analysis and Management*."
+
+*Claro. Credible. Verificable.*
+:::
+:::
+
+**Estructura:** Headline (120 caracteres) + Bio (2000 caracteres en 4 párrafos) + Foto profesional auténtica
+
+
+# ORCID, Scholar y ResearchGate
+
+## ORCID (obligatorio)
+
+Identificador único permanente: XXXX-XXXX-XXXX-XXXX
+
+Vincula todas tus publicaciones independiente de cambios de nombre o institución.
+
+**Bio en ORCID:**
+
+❌ "Researcher" / ✅ "Research in education policy using quantitative methods. Currently studying technical education and occupational mobility in Chile."
+
+## Scopus y ResearchGate
+
+**Scholar:** Perfil automático cuando publicas. Llénalo: afiliación, investigación actual, top publications.
+
+**ResearchGate:** Menos crítico. Si lo usas: bio clara, foto profesional, link a ORCID. No es tu único lugar.
+
+
+# Portal Investigador ANID
+
+## Para investigadores en Chile
+
+**Obligatorio si tienes:**
+- Beca doctoral ANID
+- Proyecto Fondecyt
+- Publicaciones a reportar
+
+**Qué llenar:**
+
+| Sección | Contenido |
+|---------|-----------|
+| **Resumen** | 250 palabras sobre tu línea investigativa |
+| **Palabras clave** | 5-8 en inglés y español |
+| **Área ANID** | Categoría según clasificación nacional |
+| **Publicaciones** | Automático si usas DOI |
+
+**Consejo:** ANID tira datos de tu ORCID. Si ORCID está completo, el Portal se llena solo.
+
+
+
+# Tu CV y BIO: <span style='color: #e67e22;'>Múltiples Versiones</span>
+
+## No son mentiras. Son lentes autónomas.
+
+| Contexto | Enfatiza | Ejemplo |
+|----------|----------|---------|
+| **Fondecyt** | Rigor metodológico | "Investiga educación usando microdatos administrativos y métodos causales" |
+| **Concursos políticas** | Aplicabilidad | "Ha trabajado con gobiernos en diseño de política educativa" |
+| **ONGs** | Problema social | "Estudia determinantes de acceso educativo en poblaciones vulnerables" |
+| **Universidad** | Docencia y crítica | "Forma investigadores en análisis de políticas" |
+
+El mismo investigador. Cuatro lecturas auténticas del mismo trabajo.
+
+
+
+# ¿Inglés o español? <span style='color: #e67e22;'>Estrategia</span>
+
+## La regla: Publica donde tu audiencia lee
+
+| Contexto | Idioma | Razón |
+|----------|--------|-------|
+| **ANID / Conferencias Chile** | Español | Evaluadores nacionales |
+| **ORCID / Scopus / Fondecyt int'l** | Inglés | Audiencia global |
+| **LinkedIn** | Español + Inglés | Duplica alcance (dos versiones) |
+| **ResearchGate** | Inglés | Comunidad internacional |
+
+**Regla:** Si publicas en inglés en revista indexada, tu bio en ORCID debe estar en inglés.
+
+
+
+# CV Académico: <span style='color: #e67e22;'>Estructura</span>
+
+## Qué incluir como doctorando
+
+```
+1. HEADER (Nombre, ORCID, contacto)
+2. RESUMEN EJECUTIVO (3-4 líneas sobre tu investigación)
+3. FORMACIÓN ACADÉMICA (Licenciatura, Magister, Doctorado)
+4. EXPERIENCIA DE INVESTIGACIÓN (Proyectos, becas)
+5. PUBLICACIONES (Artículos, reportes, tesis)
+6. PRESENTACIONES (Seminarios, conferencias)
+7. DOCENCIA (Si corresponde)
+8. IDIOMAS
+9. SKILLS TÉCNICOS (R, Python, STATA, Atlas.ti)
+10. REFERENCIAS (2-3 profesores)
+```
+
+**Tamaño:** 2-4 páginas según experiencia. Máximo 4.
+
+**Formato:** Calibri o Times 11pt, espaciado 1 línea, márgenes 2.5cm, sin foto.
+
+
+
+# Header y Resumen <span style='color: #e67e22;'>Ejecutivo</span>
+
+## ✅ Correcto
+
+```
+CATALINA GARCÍA MORALES
+Santiago, Chile | (9) 9 XXXX XXXX | cgmorales@u.uchile.cl
+ORCID: 0000-XXXX-XXXX-XXXX | Scopus: XXXXXX
+
+INVESTIGADORA
+Especialista en evaluación de políticas educativas usando métodos 
+cuantitativos. Enfoque en equidad de género en educación técnica. 
+Doctoranda en Políticas Públicas (Universidad de Chile).
+```
+
+## ❌ Evitar
+
+"Investigadora multidisciplinaria apasionada por políticas públicas y educación. Intereses amplios en desarrollo, género, tecnología y gobernanza."
+
+*(Genérico, sin foco, sin ORCID)*
+
+
+
+# Formación y Experiencia <span style='color: #e67e22;'>de Investigación</span>
+
+## ✅ Formación
+
+```
+Doctorado en Políticas Públicas, Universidad de Chile
+Tema: Impacto de educación técnica en movilidad ocupacional 
+de mujeres jóvenes (2023-2027)
+Beca de Doctorado Nacional ANID #XXXXXX
+
+Magister en Economía de la Educación, Universidad de Chile (2022)
+Tesis: "Retorno salarial diferenciado por género en educación técnica"
+Calificación: Sobresaliente
+```
+
+## ✅ Experiencia
+
+```
+Investigadora Responsable, Fondecyt Iniciación (2024-2027)
+"Gender and occupational mobility in technical education"
+Financiamiento: $25,000 USD | Co-investigadores: 1
+
+Asistente de Investigación, ANID Milenio (2022-2023)
+Centro de Estudios de Conflicto y Cohesión Social (CECS)
+Análisis de datos CASEN, construcción de bases de datos
+```
+
+
+
+# Publicaciones y Presentaciones <span style='color: #e67e22;'>para Doctorando</span>
+
+## ✅ Con publicaciones
+
+```
+PUBLICACIONES
+
+García, C., & López, J. (2023). Gender gaps in technical 
+education returns: Evidence from Chile. *Education Policy 
+Analysis and Management*, 45(3), 234-256. DOI: 10.XXXX/xxxxx
+
+Trabajos en Preparación
+García, C., López, J., & Ruiz, M. Differential mobility 
+trajectories by technical specialty. (Submitted to 
+Economics of Education Review)
+```
+
+## ✅ Sin publicaciones aún
+
+```
+PUBLICACIONES
+
+En Preparación
+- "Technical education and occupational segregation" 
+  (expected 2025)
+```
+
+
+
+# Presentaciones, Idiomas y Skills
+
+## ✅ Correctos
+
+```
+PRESENTACIONES
+García, C. (2024). Technical education and gender segregation 
+in labor markets. XVII Encuentro Anual SCHPP, Santiago.
+
+Seminario de Métodos Cuantitativos, Departamento de Sociología, 
+Universidad de Chile (2024)
+
+IDIOMAS
+- Español (nativo) | Inglés (fluido, C1) | Portugués (conversacional)
+
+HERRAMIENTAS Y MÉTODOS
+- Software: R, Python, STATA, ArcGIS
+- Métodos: Inferencia causal, diferencias en diferencias, 
+  pareamiento por propensión
+- Bases de datos: CASEN, EANNA, datos administrativos MINEDUC
+```
+
+
+
+# Tips para tu CV de <span style='color: #e67e22;'>Doctorando</span>
+
+## Haz esto ahora
+
+1. **Crea tu ORCID** antes del CV. Agrega el número.
+2. **Sé específico:** "Econometría" es vago. "Diferencias en diferencias" es concreto.
+3. **Usa DOI** en publicaciones. Es verificable.
+4. **Actualiza cada 6 meses.** No esperes al final del doctorado.
+5. **Formato único:** Sin cambios de colores entre secciones.
+6. **No copies:** Tu CV ≠ CV de tu asesor. Copia estructura, no contenido.
+
+**Errores comunes:** "Intereses amplios" (sé específico) • "Apasionado" (muéstrate, no lo digas) • CV de 7 páginas (máx. 4) • Sin actualizar desde 2020 (negligencia académica)
+
+
+
+# Ejercicio 1: Tu BIO en <span style='color: #e67e22;'>5 Minutos</span>
+
+## Instrucciones
+
+1. **Frase base** (máx. 15 palabras): Qué investigas
+   - "Investigo retorno salarial de educación técnica sectorial"
+
+2. **Metodología** (máx. 10 palabras)
+   - "usando métodos cuantitativos y análisis causal"
+
+3. **Contexto actual** (máx. 15 palabras)
+   - "Actualmente desarrollo proyecto Fondecyt sobre género y movilidad ocupacional"
+
+4. **Impacto** (máx. 10 palabras)
+   - "con implicancias para política educativa sectorial"
+
+**Junta todo en 150 palabras máximo.**
+
+De esta bio base extraes versiones para cada plataforma.
+
+
+
+# Ejercicio 2: Draft de CV en <span style='color: #e67e22;'>10 Minutos</span>
+
+## Pasos
+
+1. Abre Word. Copia la estructura de las láminas anteriores.
+2. **Header:** Nombre, ORCID, email, ciudad
+3. **Formación:** Licenciatura hasta hoy
+4. **Experiencia:** Proyectos, asistencias, internados
+5. **Publicaciones:** Lo que tengas (tesis, reportes, papers)
+6. **Presentaciones:** Seminarios donde hayas presentado
+7. **Skills:** Programas, métodos, idiomas
+
+**No perfecciones ahora.** Haz un draft. Luego refinas.
+
+::: callout-important
+Un CV imperfecto publicado es mejor que un CV perfecto nunca terminado.
+:::
+
+
+
+# TAREA 1: Identidad Académica <span style='color: #e67e22;'>y Perfiles</span>
+
+## Entregables (para próxima sesión)
+
+1. **CV en borrador** (3-4 páginas)
+   - Estructura completa
+   - Datos actualizados
+   - Con ORCID
+
+2. **BIO en 3 versiones** (100 palabras cada una)
+   - Versión Fondecyt (rigor metodológico)
+   - Versión conferencia de políticas (aplicabilidad)
+   - Versión LinkedIn (profesional pero accesible)
+
+3. **Perfil ORCID iniciado**
+   - Accede a orcid.org
+   - Crea tu identificador
+   - Completa biografía básica
+
+::: callout-important
+Trae esto completado para revisar en clase.
+:::
+
+
+
+# LECTURA CRÍTICA
+
+## Lectura crítica es una habilidad
+
+No es acumular información. Es hacer preguntas mientras lees:
+
+- ¿Cuál es exactamente la pregunta investigable?
+- ¿Qué justifica que importe?
+- ¿Qué podría cuestionarse?
+- ¿A quién le habla este paper?
+- ¿Qué variables cruciales falta medir?
+
+
+
+# Partes de un <span style='color: #e67e22;'>Paper</span>
+
+## Arquitectura funcional y preguntas críticas
+
+| Sección | Pregunta al leer |
+|---------|------------------|
+| **Título + Resumen** | ¿Me interesa? ¿Cuál es la pregunta? |
+| **Introducción** | ¿Por qué importa? ¿Cuál es el gap? |
+| **Literatura** | ¿Qué ya se sabe? ¿Qué falta? |
+| **Metodología** | ¿Puedo replicar? ¿Hay alternativas? ¿Qué supuestos hace? |
+| **Resultados** | ¿Qué encontró? ¿Qué me sorprende? |
+| **Conclusión** | ¿Anticipa objeciones? ¿A qué política aplica? |
+
+
+
+# Ejemplo: Paper sobre <span style='color: #e67e22;'>Educación Técnica</span>
+
+## Lectura crítica paso a paso
+
+**Título:** "Acceso a Educación Técnica y Movilidad Salarial: Chile 2010"
+
+**Intro:** "La tasa de retorno es X%, pero nadie ha medido si el acceso real..." ← Gap identificado.
+
+**Literatura:** Estudios de otros países, pero: "En Chile, no hay evaluaciones causales post-reforma." ← Brecha justificada.
+
+**Metodología:** Reforma de 2010 como experimento natural. Diferencias en diferencias.
+
+**Resultados:** Efecto +12% salarial en hombres. Para mujeres: sin efecto estadísticamente significativo.
+
+**Pregunta crítica:** ¿Por qué diferencias por sexo? El paper no lo explica suficientemente. ← Limitación identificada.
+
+
+
+# Protocolo de Lectura <span style='color: #e67e22;'>Crítica</span>
+
+## Primera lectura (25 minutos)
+
+Título + Resumen + Introducción + Conclusión.
+
+¿Cuál es la pregunta? ¿Por qué importa? ¿Qué encontraron?
+
+## Segunda lectura (45 minutos)
+
+Metodología + Resultados con cuidado.
+
+¿Qué es lo central? ¿Qué supuestos hace la metodología? ¿Qué variables son clave?
+
+## Lectura crítica (30 minutos después)
+
+Vuelve a conclusión. Ahora pregunta críticas:
+
+- ¿Qué no abordó el paper?
+- ¿Qué variables cruciales falta medir?
+- ¿A qué política específica aplica?
+- ¿Sobreconcluye?
+
+::: callout-important
+**Resumen:** Si no puedes resumir el paper en una frase, no lo entendiste.
+:::
+
+
+
+# Cómo mejorar tu lectura <span style='color: #e67e22;'>académica</span>
+
+## Estrategias prácticas
+
+**Lee papers en grupo** → Descubres dónde está la confusión. Otros ven detalles que perdiste.
+
+**Compara dos papers sobre la misma pregunta** → Aprendes a leer críticamente. ¿Resultados iguales? ¿Diferencias metodológicas explican divergencias?
+
+**Busca limitaciones no mencionadas** → Desarrolla pensamiento crítico. ¿Qué variables omitió? ¿Qué contexto institucional cambió?
+
+**Lee en idioma original** → Conserva vocabulario y conceptos locales. Las traducciones pierden matices.
+
+**Marca preguntas en márgenes** → Resuelve después, no mientras lees. Interrumpir rompe el flujo narrativo del paper.
+
+
+
+# TAREA 2: Seleccionar y Anotar <span style='color: #e67e22;'>un Paper</span>
+
+## Entregables (para próxima sesión)
+
+1. **Elige un paper** académico sobre tu tema de interés
+   - Debe tener: pregunta clara, datos de Chile o América Latina, implicancias para políticas públicas
+   - Año: 2020 en adelante
+   - Extensión: 8-12 páginas (no más)
+
+2. **Anota el paper** con protocolo de lectura crítica
+   - Márgenes: pregunta central
+   - Márgenes: brecha identificada
+   - Márgenes: metodología y supuestos
+   - Márgenes: resultado central
+   - Márgenes: limitación que identifiques
+
+3. **Prepara breve resumen oral** (2 minutos)
+   - ¿Cuál es la pregunta?
+   - ¿Cuál es tu limitación crítica principal?
+
+::: callout-important
+Trae el paper impreso o anotado en PDF para compartir en clase.
+:::
+
+
+
+# Lectura Obligatoria
+
+## Booth, Colomb y Williams, Cap. 2: "Connecting with Your Reader"
+
+Argumentan que escribir es un acto de comunicación retórica, no transmisión de información. El lector académico es activamente escéptico.
+
+**Mientras lees, identifica:**
+
+1. ¿Cuál es el argumento central sobre conectar con lectores?
+2. ¿Qué ejemplos dan de escritura que falla?
+3. ¿Por qué insisten en que es colaboración, no transmisión?
+
+**Concepto clave:** "Anticipated objections"
+
+Escritores efectivos anticipan lo que sus lectores pensarán. No esperas a que el lector dude. Abordas su duda proactivamente dentro del texto.
+
+**Reflexión:** ¿Cómo anticiparías objeciones a tu pregunta de investigación? Si estudias educación técnica y género, un lector escéptico podría pensar: "Pero la técnica es heterogénea. ¿Es igual técnica agrícola que informática?"
+
+Un escritor anticipatorio no espera la objeción. La aborda: "Aunque estudiamos técnica agrícola, creemos que los mecanismos (networking, credencial sectorial) aplican también a técnica industrial".
