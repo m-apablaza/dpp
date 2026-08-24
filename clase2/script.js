@@ -1,5 +1,5 @@
 const API_URL =
-"https://script.google.com/macros/s/AKfycbwV55svTJlvJwCr3KRm2P_RknjZRvSg_85B95MeEGrZhBxf7YGL8ylvEByVzzI0Z2XD/exec";
+    "https://script.google.com/macros/s/AKfycbwV55svTJlvJwCr3KRm2P_RknjZRvSg_85B95MeEGrZhBxf7YGL8ylvEByVzzI0Z2XD/exec";
 
 
 const students = [
@@ -15,11 +15,13 @@ const students = [
 
 let currentStudent = "";
 
+let selectedQuestions = [];
 
 
-/* =========================
+
+/* =====================================================
    API
-========================= */
+===================================================== */
 
 
 async function getData() {
@@ -40,22 +42,30 @@ async function getData() {
 }
 
 
+
 async function sendData(data) {
 
     const response =
         await fetch(
+
             API_URL,
+
             {
+
                 method: "POST",
 
                 headers: {
+
                     "Content-Type":
                         "text/plain;charset=utf-8"
+
                 },
 
                 body:
                     JSON.stringify(data)
+
             }
+
         );
 
 
@@ -74,9 +84,9 @@ async function sendData(data) {
 
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 
 function showPage(page) {
@@ -84,10 +94,13 @@ function showPage(page) {
     document
         .querySelectorAll(".page")
         .forEach(
-            p =>
-                p.classList.remove(
+            pageElement => {
+
+                pageElement.classList.remove(
                     "active"
-                )
+                );
+
+            }
         );
 
 
@@ -95,15 +108,17 @@ function showPage(page) {
         .getElementById(
             "page" + page
         )
-        .classList.add("active");
+        .classList.add(
+            "active"
+        );
 
 }
 
 
 
-/* =========================
-   PAGE 1
-========================= */
+/* =====================================================
+   PAGE 1 — IDENTIFICATION + QUESTIONS
+===================================================== */
 
 
 async function saveQuestions() {
@@ -118,20 +133,35 @@ async function saveQuestions() {
 
     const q1 =
         document
-            .getElementById("q1")
-            .value.trim();
+            .getElementById(
+                "q1"
+            )
+            .value
+            .trim();
 
 
     const q2 =
         document
-            .getElementById("q2")
-            .value.trim();
+            .getElementById(
+                "q2"
+            )
+            .value
+            .trim();
 
 
     const q3 =
         document
-            .getElementById("q3")
-            .value.trim();
+            .getElementById(
+                "q3"
+            )
+            .value
+            .trim();
+
+
+
+    /* -------------------------
+       Validation
+    ------------------------- */
 
 
     if (!name) {
@@ -145,10 +175,14 @@ async function saveQuestions() {
     }
 
 
-    if (!q1 || !q2 || !q3) {
+    if (
+        !q1 ||
+        !q2 ||
+        !q3
+    ) {
 
         alert(
-            "Please complete all three questions."
+            "Please complete all three research questions."
         );
 
         return;
@@ -156,29 +190,51 @@ async function saveQuestions() {
     }
 
 
+
     try {
+
+        /*
+           Check Google Sheets first.
+        */
 
         const data =
             await getData();
 
 
+
+        /*
+           Check whether this student
+           already submitted questions.
+        */
+
         const alreadySubmitted =
             data.questions.some(
+
                 row =>
                     row.student === name
+
             );
+
 
 
         if (alreadySubmitted) {
 
-            currentStudent = name;
+            currentStudent =
+                name;
+
 
             showAlreadySubmitted();
+
 
             return;
 
         }
 
+
+
+        /*
+           Save questions.
+        */
 
         await sendData({
 
@@ -191,9 +247,7 @@ async function saveQuestions() {
             questions: [
 
                 q1,
-
                 q2,
-
                 q3
 
             ]
@@ -201,15 +255,23 @@ async function saveQuestions() {
         });
 
 
-        currentStudent = name;
+
+        currentStudent =
+            name;
 
 
         showAlreadySubmitted();
 
 
+
     }
 
     catch (error) {
+
+        console.error(
+            error
+        );
+
 
         alert(
             "Could not connect to the server. Please try again."
@@ -221,19 +283,29 @@ async function saveQuestions() {
 
 
 
-/* =========================
-   ALREADY SUBMITTED
-========================= */
+/* =====================================================
+   STUDENT ALREADY SUBMITTED
+===================================================== */
 
 
 function showAlreadySubmitted() {
+
+    /*
+       Hide the original form.
+    */
 
     document
         .getElementById(
             "studentForm"
         )
-        .style.display = "none";
+        .style.display =
+            "none";
 
+
+
+    /*
+       Show confirmation.
+    */
 
     const message =
         document.getElementById(
@@ -249,15 +321,20 @@ function showAlreadySubmitted() {
 
         <strong>
             Your research questions
-            have already been submitted.
+            have been submitted.
         </strong>
 
         <p>
-            You cannot edit them.
+            Your questions cannot be edited.
         </p>
 
     `;
 
+
+
+    /*
+       Show Continue button.
+    */
 
     document
         .getElementById(
@@ -270,9 +347,9 @@ function showAlreadySubmitted() {
 
 
 
-/* =========================
+/* =====================================================
    CONTINUE TO EVALUATION
-========================= */
+===================================================== */
 
 
 async function continueToEvaluation() {
@@ -285,9 +362,9 @@ async function continueToEvaluation() {
 
 
 
-/* =========================
-   PAGE 2
-========================= */
+/* =====================================================
+   PAGE 2 — WAIT FOR ALL STUDENTS
+===================================================== */
 
 
 async function checkQuestions() {
@@ -300,9 +377,20 @@ async function checkQuestions() {
 
     const container =
         document.getElementById(
-            "ratingContainer"
+            "selectionContainer"
         );
 
+
+    const submitButton =
+        document.getElementById(
+            "submitSelectionButton"
+        );
+
+
+
+    /*
+       Reset interface.
+    */
 
     waiting.style.display =
         "block";
@@ -312,12 +400,16 @@ async function checkQuestions() {
         "none";
 
 
-    document
-        .getElementById(
-            "submitRatingsButton"
-        )
-        .style.display =
-            "none";
+    submitButton.style.display =
+        "none";
+
+
+    selectedQuestions =
+        [];
+
+
+    updateCounter();
+
 
 
     try {
@@ -326,12 +418,11 @@ async function checkQuestions() {
             await getData();
 
 
-        /*
-           Do not show anything until
-           all five students have
-           submitted their questions.
-        */
 
+        /*
+           If fewer than five students
+           have submitted, keep waiting.
+        */
 
         if (
             data.questions.length <
@@ -342,42 +433,47 @@ async function checkQuestions() {
 
                 <strong>
                     Waiting for all students
-                    to submit their research
-                    questions...
+                    to submit their research questions...
                 </strong>
 
                 <p>
+
                     ${data.questions.length}
                     of
                     ${students.length}
                     students have submitted.
+
                 </p>
 
                 <p>
+
                     When everyone has finished,
                     click
+
                     <strong>
-                    Check for Questions
+                        Check for Questions
                     </strong>.
+
                 </p>
 
             `;
+
 
             return;
 
         }
 
 
-        /*
-           All five have submitted.
-        */
 
+        /*
+           All five students have submitted.
+        */
 
         waiting.style.display =
             "none";
 
 
-        loadRatingQuestions(
+        loadSelectionQuestions(
             data.questions
         );
 
@@ -386,17 +482,18 @@ async function checkQuestions() {
             "block";
 
 
-        document
-            .getElementById(
-                "submitRatingsButton"
-            )
-            .style.display =
-                "inline-block";
+        updateCounter();
+
 
 
     }
 
     catch (error) {
+
+        console.error(
+            error
+        );
+
 
         waiting.innerHTML = `
 
@@ -405,8 +502,10 @@ async function checkQuestions() {
             </strong>
 
             <p>
+
                 Please check your internet
                 connection and try again.
+
             </p>
 
         `;
@@ -417,146 +516,274 @@ async function checkQuestions() {
 
 
 
-/* =========================
-   LOAD QUESTIONS
-========================= */
+/* =====================================================
+   LOAD ANONYMOUS QUESTIONS
+===================================================== */
 
 
-function loadRatingQuestions(
+function loadSelectionQuestions(
     allQuestions
 ) {
 
-
     const container =
         document.getElementById(
-            "ratingContainer"
+            "selectionContainer"
         );
 
 
-    container.innerHTML = "";
+    container.innerHTML =
+        "";
+
 
 
     /*
-       Remove current student's questions.
+       Remove the current student's
+       questions.
     */
-
 
     const others =
         allQuestions.filter(
+
             row =>
                 row.student !==
                 currentStudent
+
         );
 
 
+
     /*
-       Randomize the questions.
+       Put all questions from the
+       other four students into
+       one single anonymous pool.
     */
 
+    const allOtherQuestions =
+        [];
 
-    const randomized =
-        shuffle(others);
 
 
-    randomized.forEach(
+    others.forEach(
         student => {
 
+            student.questions.forEach(
+                (
+                    question,
+                    index
+                ) => {
 
-            /*
-               No student name is displayed.
-            */
+                    allOtherQuestions.push({
+
+                        target:
+                            student.student,
+
+                        questionNumber:
+                            index + 1,
+
+                        text:
+                            question
+
+                    });
+
+                }
+            );
+
+        }
+    );
 
 
-            const block =
+
+    /*
+       Randomize the 12 questions.
+    */
+
+    const randomized =
+        shuffle(
+            allOtherQuestions
+        );
+
+
+
+    /*
+       Create one clickable card
+       for each question.
+    */
+
+    randomized.forEach(
+        item => {
+
+            const label =
                 document.createElement(
-                    "div"
+                    "label"
                 );
 
 
-            block.className =
-                "anonymousBlock";
+            label.className =
+                "question-card";
 
 
-            block.dataset.student =
-                student.student;
+            label.dataset.target =
+                item.target;
 
 
-            student.questions
-                .forEach(
-                    (
-                        question,
-                        questionIndex
-                    ) => {
+            label.dataset.questionNumber =
+                item.questionNumber;
 
 
-                        const div =
-                            document.createElement(
-                                "div"
-                            );
+
+            label.innerHTML = `
+
+                <input
+                    type="checkbox"
+                >
+
+                <span class="question-text">
+
+                    ${escapeHtml(
+                        item.text
+                    )}
+
+                </span>
+
+            `;
 
 
-                        div.className =
-                            "question";
+
+            const checkbox =
+                label.querySelector(
+                    "input"
+                );
 
 
-                        let options = "";
+
+            /*
+               Selection behavior.
+            */
+
+            checkbox.addEventListener(
+                "change",
+                () => {
 
 
-                        for (
-                            let i = 1;
-                            i <= 7;
-                            i++
+                    /* -------------------------
+                       SELECT
+                    ------------------------- */
+
+                    if (
+                        checkbox.checked
+                    ) {
+
+
+                        /*
+                           Never allow more
+                           than three.
+                        */
+
+                        if (
+                            selectedQuestions.length >= 3
                         ) {
 
-                            options += `
+                            checkbox.checked =
+                                false;
 
-                                <label>
-
-                                    <input
-                                        type="radio"
-
-                                        name="
-                                            student_${student.student}
-                                            _q${questionIndex}
-                                        "
-
-                                        value="${i}"
-                                    >
-
-                                    ${i}
-
-                                </label>
-
-                            `;
+                            return;
 
                         }
 
 
-                        div.innerHTML = `
 
-                            <p>
-                                ${question}
-                            </p>
+                        selectedQuestions.push({
 
-                            <div class="rating">
+                            target:
+                                item.target,
 
-                                ${options}
+                            question:
+                                item.questionNumber,
 
-                            </div>
+                            text:
+                                item.text
 
-                        `;
+                        });
 
 
-                        block.appendChild(
-                            div
+
+                        label.classList.add(
+                            "selected"
                         );
 
                     }
-                );
+
+
+
+                    /* -------------------------
+                       DESELECT
+                    ------------------------- */
+
+                    else {
+
+
+                        selectedQuestions =
+                            selectedQuestions.filter(
+
+                                selected =>
+
+                                    !(
+                                        selected.target ===
+                                        item.target
+
+                                        &&
+
+                                        selected.question ===
+                                        item.questionNumber
+                                    )
+
+                            );
+
+
+                        label.classList.remove(
+                            "selected"
+                        );
+
+                    }
+
+
+
+                    /*
+                       Disable all remaining
+                       questions after three
+                       have been selected.
+                    */
+
+                    document
+                        .querySelectorAll(
+                            ".question-card input"
+                        )
+                        .forEach(
+                            input => {
+
+                                if (
+                                    !input.checked
+                                ) {
+
+                                    input.disabled =
+                                        selectedQuestions.length >= 3;
+
+                                }
+
+                            }
+                        );
+
+
+
+                    updateCounter();
+
+                }
+            );
+
 
 
             container.appendChild(
-                block
+                label
             );
 
         }
@@ -566,25 +793,82 @@ function loadRatingQuestions(
 
 
 
-/* =========================
-   SAVE RATINGS
-========================= */
+/* =====================================================
+   SELECTION COUNTER
+===================================================== */
 
 
-async function saveRatings() {
+function updateCounter() {
 
-    const blocks =
-        document.querySelectorAll(
-            ".anonymousBlock"
+    const counter =
+        document.getElementById(
+            "selectionCounter"
         );
 
 
+    const submitButton =
+        document.getElementById(
+            "submitSelectionButton"
+        );
+
+
+
+    /*
+       Update counter.
+    */
+
+    counter.textContent =
+        `${selectedQuestions.length} / 3 selected`;
+
+
+
+    /*
+       Exactly three selected:
+       enable Submit.
+    */
+
     if (
-        blocks.length !== 4
+        selectedQuestions.length === 3
+    ) {
+
+        counter.textContent =
+            "3 / 3 selected ✓";
+
+
+        submitButton.style.display =
+            "inline-block";
+
+    }
+
+
+    else {
+
+        submitButton.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SAVE THE THREE CHOICES
+===================================================== */
+
+
+async function saveSelection() {
+
+    /*
+       Final validation.
+    */
+
+    if (
+        selectedQuestions.length !== 3
     ) {
 
         alert(
-            "There are not enough questions yet."
+            "Please select exactly 3 research questions."
         );
 
         return;
@@ -592,76 +876,14 @@ async function saveRatings() {
     }
 
 
-    const newRatings = [];
-
-
-    for (
-        let i = 0;
-        i < blocks.length;
-        i++
-    ) {
-
-
-        const target =
-            blocks[i].dataset.student;
-
-
-        const questions =
-            blocks[i]
-                .querySelectorAll(
-                    ".question"
-                );
-
-
-        for (
-            let q = 0;
-            q < questions.length;
-            q++
-        ) {
-
-
-            const selected =
-                questions[q]
-                    .querySelector(
-                        "input:checked"
-                    );
-
-
-            if (!selected) {
-
-                alert(
-                    "Please rate every research question."
-                );
-
-                return;
-
-            }
-
-
-            newRatings.push({
-
-                rater:
-                    currentStudent,
-
-                target:
-                    target,
-
-                question:
-                    q + 1,
-
-                score:
-                    Number(
-                        selected.value
-                    )
-
-            });
-
-        }
-
-    }
-
 
     try {
+
+
+        /*
+           Each selected question
+           receives one vote.
+        */
 
         await sendData({
 
@@ -669,17 +891,33 @@ async function saveRatings() {
                 "ratings",
 
             ratings:
-                newRatings
+
+                selectedQuestions.map(
+                    item => ({
+
+                        rater:
+                            currentStudent,
+
+                        target:
+                            item.target,
+
+                        question:
+                            item.question,
+
+                        score:
+                            1
+
+                    })
+                )
 
         });
 
 
-        /*
-           Instead of automatically
-           loading results, show a
-           button to continue.
-        */
 
+        /*
+           Replace Page 2 with
+           confirmation.
+        */
 
         const page =
             document.getElementById(
@@ -690,16 +928,22 @@ async function saveRatings() {
         page.innerHTML = `
 
             <h2>
-                Evaluation Submitted
+                Selection Submitted
             </h2>
 
             <p>
-                Your ratings have been
+
+                Your three choices have been
                 successfully submitted.
+
             </p>
 
             <button
-                onclick="showPage(3); loadResults();">
+                onclick="
+                    showPage(3);
+                    loadResults();
+                "
+            >
 
                 Continue to Results
 
@@ -708,12 +952,22 @@ async function saveRatings() {
         `;
 
 
+
     }
 
     catch (error) {
 
+        console.error(
+            error
+        );
+
+
         alert(
-            "Your evaluation could not be submitted. Please check your internet connection and try again."
+
+            "Your selection could not be submitted. " +
+            "Please check your internet connection " +
+            "and try again."
+
         );
 
     }
@@ -722,9 +976,9 @@ async function saveRatings() {
 
 
 
-/* =========================
-   RESULTS
-========================= */
+/* =====================================================
+   PAGE 3 — RESULTS
+===================================================== */
 
 
 async function loadResults() {
@@ -739,10 +993,12 @@ async function loadResults() {
         "<p>Loading results...</p>";
 
 
+
     try {
 
         const data =
             await getData();
+
 
 
         const questions =
@@ -753,80 +1009,113 @@ async function loadResults() {
             data.ratings || [];
 
 
-        const results = [];
 
+        const results =
+            [];
+
+
+
+        /*
+           Calculate votes for every
+           individual research question.
+        */
 
         questions.forEach(
             student => {
 
-
-                student.questions
-                    .forEach(
-                        (
-                            question,
-                            index
-                        ) => {
+                student.questions.forEach(
+                    (
+                        question,
+                        index
+                    ) => {
 
 
-                            const score =
-                                ratings
+                        const votes =
+                            ratings.filter(
 
-                                    .filter(
-                                        r =>
-                                            r.target ===
-                                            student.student &&
+                                r =>
 
-                                            Number(
-                                                r.question
-                                            ) ===
-                                            index + 1
-                                    )
+                                    r.target ===
+                                    student.student
 
-                                    .reduce(
-                                        (
-                                            sum,
-                                            r
-                                        ) =>
-                                            sum +
-                                            Number(
-                                                r.score
-                                            ),
+                                    &&
 
-                                        0
-                                    );
+                                    Number(
+                                        r.question
+                                    ) ===
+                                    index + 1
+
+                                    &&
+
+                                    Number(
+                                        r.score
+                                    ) ===
+                                    1
+
+                            ).length;
 
 
-                            results.push({
 
-                                student:
-                                    student.student,
+                        results.push({
 
-                                question:
-                                    question,
+                            student:
+                                student.student,
 
-                                score:
-                                    score
+                            question:
+                                question,
 
-                            });
+                            votes:
+                                votes
 
-                        }
-                    );
+                        });
+
+                    }
+                );
 
             }
         );
 
 
+
         /*
-           Highest score first.
+           Highest number of votes first.
         */
 
-
         results.sort(
-            (a, b) =>
-                b.score -
-                a.score
+
+            (a, b) => {
+
+                if (
+                    b.votes !==
+                    a.votes
+                ) {
+
+                    return (
+                        b.votes -
+                        a.votes
+                    );
+
+                }
+
+
+                /*
+                   Alphabetical order
+                   for ties.
+                */
+
+                return a.student.localeCompare(
+                    b.student
+                );
+
+            }
+
         );
 
+
+
+        /*
+           Build question ranking.
+        */
 
         let html = `
 
@@ -851,7 +1140,7 @@ async function loadResults() {
                     </th>
 
                     <th>
-                        Points
+                        Votes
                     </th>
 
                 </tr>
@@ -859,8 +1148,12 @@ async function loadResults() {
         `;
 
 
+
         results.forEach(
-            (item, index) => {
+            (
+                item,
+                index
+            ) => {
 
                 html += `
 
@@ -871,17 +1164,21 @@ async function loadResults() {
                         </td>
 
                         <td>
-                            ${item.student}
+                            ${escapeHtml(
+                                item.student
+                            )}
                         </td>
 
                         <td>
-                            ${item.question}
+                            ${escapeHtml(
+                                item.question
+                            )}
                         </td>
 
-                        <td>
-                            <strong>
-                                ${item.score}
-                            </strong>
+                        <td class="vote-count">
+
+                            ${item.votes}
+
                         </td>
 
                     </tr>
@@ -892,24 +1189,193 @@ async function loadResults() {
         );
 
 
+
         html += `
+
             </table>
+
         `;
+
+
+
+        /*
+           Calculate total votes
+           received by each student.
+        */
+
+        const totals =
+            {};
+
+
+
+        results.forEach(
+            item => {
+
+                totals[item.student] =
+
+                    (
+                        totals[item.student] ||
+                        0
+                    )
+
+                    +
+
+                    item.votes;
+
+            }
+        );
+
+
+
+        /*
+           Sort students by total votes.
+        */
+
+        const studentRanking =
+
+            Object
+                .entries(
+                    totals
+                )
+
+                .map(
+                    (
+                        [
+                            student,
+                            votes
+                        ]
+                    ) => ({
+
+                        student:
+                            student,
+
+                        votes:
+                            votes
+
+                    })
+                )
+
+                .sort(
+                    (a, b) => {
+
+                        if (
+                            b.votes !==
+                            a.votes
+                        ) {
+
+                            return (
+                                b.votes -
+                                a.votes
+                            );
+
+                        }
+
+
+                        return a.student.localeCompare(
+                            b.student
+                        );
+
+                    }
+                );
+
+
+
+        /*
+           Student ranking table.
+        */
+
+        html += `
+
+            <h3>
+                Student Ranking
+            </h3>
+
+            <table>
+
+                <tr>
+
+                    <th>
+                        Rank
+                    </th>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Total Votes
+                    </th>
+
+                </tr>
+
+        `;
+
+
+
+        studentRanking.forEach(
+            (
+                item,
+                index
+            ) => {
+
+                html += `
+
+                    <tr>
+
+                        <td>
+                            ${index + 1}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                item.student
+                            )}
+                        </td>
+
+                        <td class="vote-count">
+
+                            ${item.votes}
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+            }
+        );
+
+
+
+        html += `
+
+            </table>
+
+        `;
+
 
 
         container.innerHTML =
             html;
 
 
+
     }
 
     catch (error) {
 
+        console.error(
+            error
+        );
+
+
         container.innerHTML = `
 
             <p>
+
                 Could not load results.
                 Please check your connection.
+
             </p>
 
         `;
@@ -920,17 +1386,20 @@ async function loadResults() {
 
 
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 
 async function resetResults() {
 
     const confirmation =
         prompt(
-            "Type RESET to delete all results:"
+
+            "Type RESET to delete all questions and results:"
+
         );
+
 
 
     if (
@@ -943,6 +1412,7 @@ async function resetResults() {
     }
 
 
+
     try {
 
         await sendData({
@@ -953,6 +1423,7 @@ async function resetResults() {
         });
 
 
+
         alert(
             "All results have been reset."
         );
@@ -961,9 +1432,15 @@ async function resetResults() {
         location.reload();
 
 
+
     }
 
     catch (error) {
+
+        console.error(
+            error
+        );
+
 
         alert(
             "Could not reset the results."
@@ -975,9 +1452,9 @@ async function resetResults() {
 
 
 
-/* =========================
+/* =====================================================
    SHUFFLE
-========================= */
+===================================================== */
 
 
 function shuffle(array) {
@@ -986,10 +1463,13 @@ function shuffle(array) {
         [...array];
 
 
+
     for (
         let i =
             result.length - 1;
+
         i > 0;
+
         i--
     ) {
 
@@ -1004,6 +1484,7 @@ function shuffle(array) {
             result[i],
             result[j]
         ] =
+
         [
             result[j],
             result[i]
@@ -1012,6 +1493,30 @@ function shuffle(array) {
     }
 
 
+
     return result;
+
+}
+
+
+
+/* =====================================================
+   HTML SECURITY
+===================================================== */
+
+
+function escapeHtml(text) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
 
 }
