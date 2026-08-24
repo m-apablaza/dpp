@@ -2,119 +2,205 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Research Question Evaluation</title>
+    <title>
+        Research Question Evaluation
+    </title>
 
     <link rel="stylesheet"
           href="style.css">
+
 </head>
+
 
 <body>
 
 <div id="app">
 
-    <!-- PAGE 1 -->
-
-    <section id="page1"
-             class="page active">
-
-        <h1>Research Question Evaluation</h1>
-
-        <label>
-            Select your name
-        </label>
-
-        <select id="studentSelect">
-
-            <option value="">
-                Choose...
-            </option>
-
-            <option>
-                Catalina Garín
-            </option>
-
-            <option>
-                Camila Sandoval
-            </option>
-
-            <option>
-                Yamil Tala
-            </option>
-
-            <option>
-                Trinidad Valdés
-            </option>
-
-            <option>
-                Isabel Véliz
-            </option>
-
-        </select>
+    <img
+        src="logo.png"
+        class="logo"
+        alt="Logo"
+    >
 
 
-        <h2>
-            Your Research Questions
-        </h2>
+    <!-- =====================
+         PAGE 1
+    ====================== -->
+
+    <section
+        id="page1"
+        class="page active">
+
+        <h1>
+            Research Question Evaluation
+        </h1>
 
 
-        <textarea id="q1"
-                  placeholder="Research Question 1">
-        </textarea>
+        <div id="studentForm">
+
+            <label>
+                Select your name
+            </label>
 
 
-        <textarea id="q2"
-                  placeholder="Research Question 2">
-        </textarea>
+            <select id="studentSelect">
+
+                <option value="">
+                    Choose...
+                </option>
+
+                <option>
+                    Catalina Garín
+                </option>
+
+                <option>
+                    Camila Sandoval
+                </option>
+
+                <option>
+                    Yamil Tala
+                </option>
+
+                <option>
+                    Trinidad Valdés
+                </option>
+
+                <option>
+                    Isabel Véliz
+                </option>
+
+            </select>
 
 
-        <textarea id="q3"
-                  placeholder="Research Question 3">
-        </textarea>
+            <h2>
+                Your Research Questions
+            </h2>
 
 
-        <button onclick="saveQuestions()">
-            Save and Continue
+            <textarea
+                id="q1"
+                placeholder="Research Question 1">
+            </textarea>
+
+
+            <textarea
+                id="q2"
+                placeholder="Research Question 2">
+            </textarea>
+
+
+            <textarea
+                id="q3"
+                placeholder="Research Question 3">
+            </textarea>
+
+
+            <button
+                onclick="saveQuestions()">
+
+                Save and Continue
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="submittedMessage"
+            class="message"
+            style="display:none">
+
+        </div>
+
+
+        <button
+            id="continueButton"
+            style="display:none"
+            onclick="continueToEvaluation()">
+
+            Continue to Evaluation
+
         </button>
 
     </section>
 
 
-    <!-- PAGE 2 -->
 
-    <section id="page2"
-             class="page">
+    <!-- =====================
+         PAGE 2
+    ====================== -->
+
+    <section
+        id="page2"
+        class="page">
 
         <h2>
             Evaluate the Research Questions
         </h2>
 
-        <p>
-            Rate each question from
-            <strong>1 to 7</strong>.
-        </p>
 
         <p>
-            1 = Poor &nbsp;&nbsp;&nbsp;
-            7 = Excellent
+            Rate each research question
+            from <strong>1 to 7</strong>.
         </p>
 
 
-        <div id="ratingContainer">
+        <p>
+            <strong>1 = Poor</strong>
+            &nbsp;&nbsp;&nbsp;
+            <strong>7 = Excellent</strong>
+        </p>
+
+
+        <div
+            id="waiting"
+            class="waiting">
+
+            Waiting for all students
+            to submit their research questions...
+
+        </div>
+
+
+        <div
+            id="ratingContainer"
+            style="display:none">
+
         </div>
 
 
         <div class="nav">
 
-            <button onclick="showPage(1)">
+            <button
+                onclick="showPage(1)">
+
                 Back
+
             </button>
 
-            <button onclick="saveRatings()">
+
+            <button
+                id="reloadButton"
+                onclick="checkQuestions()">
+
+                Check for Questions
+
+            </button>
+
+
+            <button
+                id="submitRatingsButton"
+                onclick="saveRatings()"
+                style="display:none">
+
                 Submit Ratings
+
             </button>
 
         </div>
@@ -122,25 +208,44 @@
     </section>
 
 
-    <!-- PAGE 3 -->
 
-    <section id="page3"
-             class="page">
+    <!-- =====================
+         PAGE 3
+    ====================== -->
+
+    <section
+        id="page3"
+        class="page">
 
         <h2>
             Results
         </h2>
 
+
         <div id="results">
+
         </div>
 
 
-        <button class="resetButton"
+        <div class="nav">
+
+            <button
+                onclick="loadResults()">
+
+                Refresh Results
+
+            </button>
+
+
+            <button
+                class="resetButton"
                 onclick="resetResults()">
 
-            Reset All Results
+                Reset All Results
 
-        </button>
+            </button>
+
+        </div>
 
     </section>
 
