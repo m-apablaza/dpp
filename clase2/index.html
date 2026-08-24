@@ -1,63 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research Question Evaluation</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Research Question Evaluation</title>
+
+    <link rel="stylesheet"
+          href="style.css">
 </head>
+
 <body>
 
 <div id="app">
 
-  <section id="page1" class="page active">
-    <h1>Research Question Evaluation</h1>
-    <label>Select your name</label>
-    <select id="studentSelect">
-      <option value="">Choose...</option>
-      <option>Catalina Garín</option>
-      <option>Camila Sandoval</option>
-      <option>Yamil Tala</option>
-      <option>Trinidad Valdés</option>
-      <option>Isabel Véliz</option>
-    </select>
-    <button onclick="nextToQuestions()">Continue</button>
-  </section>
+    <!-- PAGE 1 -->
 
-  <section id="page2" class="page">
-    <h2>Your Research Questions</h2>
+    <section id="page1"
+             class="page active">
 
-    <textarea id="q1" placeholder="Research Question 1"></textarea>
-    <textarea id="q2" placeholder="Research Question 2"></textarea>
-    <textarea id="q3" placeholder="Research Question 3"></textarea>
+        <h1>Research Question Evaluation</h1>
 
-    <div class="nav">
-      <button onclick="showPage(1)">Back</button>
-      <button onclick="saveQuestions()">Save and Continue</button>
-    </div>
-  </section>
+        <label>
+            Select your name
+        </label>
 
-  <section id="page3" class="page">
-    <h2>Rate Other Students' Questions</h2>
-    <div id="ratingContainer"></div>
+        <select id="studentSelect">
 
-    <div class="nav">
-      <button onclick="showPage(2)">Back</button>
-      <button onclick="saveRatings()">Submit Ratings</button>
-    </div>
-  </section>
+            <option value="">
+                Choose...
+            </option>
 
-  <section id="page4" class="page">
-    <h2>Results</h2>
-    <div id="results"></div>
+            <option>
+                Catalina Garín
+            </option>
 
-    <div class="nav">
-      <button onclick="showPage(3)">Back</button>
-    </div>
-  </section>
+            <option>
+                Camila Sandoval
+            </option>
+
+            <option>
+                Yamil Tala
+            </option>
+
+            <option>
+                Trinidad Valdés
+            </option>
+
+            <option>
+                Isabel Véliz
+            </option>
+
+        </select>
+
+
+        <h2>
+            Your Research Questions
+        </h2>
+
+
+        <textarea id="q1"
+                  placeholder="Research Question 1">
+        </textarea>
+
+
+        <textarea id="q2"
+                  placeholder="Research Question 2">
+        </textarea>
+
+
+        <textarea id="q3"
+                  placeholder="Research Question 3">
+        </textarea>
+
+
+        <button onclick="saveQuestions()">
+            Save and Continue
+        </button>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+
+    <section id="page2"
+             class="page">
+
+        <h2>
+            Evaluate the Research Questions
+        </h2>
+
+        <p>
+            Rate each question from
+            <strong>1 to 7</strong>.
+        </p>
+
+        <p>
+            1 = Poor &nbsp;&nbsp;&nbsp;
+            7 = Excellent
+        </p>
+
+
+        <div id="ratingContainer">
+        </div>
+
+
+        <div class="nav">
+
+            <button onclick="showPage(1)">
+                Back
+            </button>
+
+            <button onclick="saveRatings()">
+                Submit Ratings
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+
+    <section id="page3"
+             class="page">
+
+        <h2>
+            Results
+        </h2>
+
+        <div id="results">
+        </div>
+
+
+        <button class="resetButton"
+                onclick="resetResults()">
+
+            Reset All Results
+
+        </button>
+
+    </section>
 
 </div>
 
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
