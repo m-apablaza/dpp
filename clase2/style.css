@@ -10,6 +10,7 @@ body {
     margin: 0;
 
     padding: 30px;
+
 }
 
 
@@ -28,6 +29,21 @@ body {
     box-shadow:
         0 4px 12px
         rgba(0,0,0,.08);
+
+}
+
+
+.logo {
+
+    display: block;
+
+    max-width: 180px;
+
+    max-height: 80px;
+
+    margin:
+        0 auto 25px auto;
+
 }
 
 
@@ -99,7 +115,8 @@ textarea {
 
     font-size: 15px;
 
-    border: 1px solid #ccc;
+    border:
+        1px solid #ccc;
 
     border-radius: 6px;
 
@@ -108,7 +125,8 @@ textarea {
 
 button {
 
-    padding: 11px 20px;
+    padding:
+        11px 20px;
 
     margin-top: 20px;
 
@@ -141,12 +159,40 @@ button:hover {
     justify-content:
         space-between;
 
+    gap: 10px;
+
     margin-top: 30px;
 
 }
 
 
-/* Anonymous blocks */
+.message {
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    background: #f0f4f8;
+
+    border-radius: 8px;
+
+}
+
+
+.waiting {
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    background: #f5f5f5;
+
+    border-radius: 8px;
+
+}
+
 
 .anonymousBlock {
 
@@ -154,20 +200,10 @@ button:hover {
 
     padding: 20px;
 
-    border: 1px solid #ddd;
+    border:
+        1px solid #ddd;
 
     border-radius: 10px;
-
-}
-
-
-.anonymousTitle {
-
-    font-weight: bold;
-
-    font-size: 18px;
-
-    margin-bottom: 15px;
 
 }
 
@@ -178,7 +214,8 @@ button:hover {
 
     padding: 15px;
 
-    background: #f8f8f8;
+    background:
+        #f8f8f8;
 
     border-radius: 8px;
 
@@ -209,8 +246,6 @@ button:hover {
 
 }
 
-
-/* Results */
 
 table {
 
@@ -259,7 +294,5 @@ th {
 
     background:
         #b42318;
-
-    margin-top: 30px;
 
 }
