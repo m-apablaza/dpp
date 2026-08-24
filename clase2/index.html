@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Question Evaluation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <section id="page1" class="page active">
+    <h1>Research Question Evaluation</h1>
+    <label>Select your name</label>
+    <select id="studentSelect">
+      <option value="">Choose...</option>
+      <option>Catalina Garín</option>
+      <option>Camila Sandoval</option>
+      <option>Yamil Tala</option>
+      <option>Trinidad Valdés</option>
+      <option>Isabel Véliz</option>
+    </select>
+    <button onclick="nextToQuestions()">Continue</button>
+  </section>
+
+  <section id="page2" class="page">
+    <h2>Your Research Questions</h2>
+
+    <textarea id="q1" placeholder="Research Question 1"></textarea>
+    <textarea id="q2" placeholder="Research Question 2"></textarea>
+    <textarea id="q3" placeholder="Research Question 3"></textarea>
+
+    <div class="nav">
+      <button onclick="showPage(1)">Back</button>
+      <button onclick="saveQuestions()">Save and Continue</button>
+    </div>
+  </section>
+
+  <section id="page3" class="page">
+    <h2>Rate Other Students' Questions</h2>
+    <div id="ratingContainer"></div>
+
+    <div class="nav">
+      <button onclick="showPage(2)">Back</button>
+      <button onclick="saveRatings()">Submit Ratings</button>
+    </div>
+  </section>
+
+  <section id="page4" class="page">
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <div class="nav">
+      <button onclick="showPage(3)">Back</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
