@@ -14,7 +14,15 @@
 
     <link rel="stylesheet"
           href="style.css">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
 </head>
 
 
@@ -131,81 +139,53 @@
     </section>
 
 
+<!-- PAGE 2 -->
+<section id="page2" class="page">
 
-    <!-- =====================
-         PAGE 2
-    ====================== -->
+    <h2>Choose the 3 strongest research questions</h2>
 
-    <section
-        id="page2"
-        class="page">
+    <p>
+        Select the three questions you consider
+        the most interesting and promising.
+    </p>
 
-        <h2>
-            Evaluate the Research Questions
-        </h2>
+    <div id="selectionCounter" class="counter">
+        0 / 3 selected
+    </div>
 
+    <div id="waiting" class="waiting">
+        Waiting for all students to submit
+        their research questions...
+    </div>
 
-        <p>
-            Rate each research question
-            from <strong>1 to 7</strong>.
-        </p>
+    <div id="selectionContainer"
+         style="display:none">
+    </div>
 
+    <div class="nav">
 
-        <p>
-            <strong>1 = Poor</strong>
-            &nbsp;&nbsp;&nbsp;
-            <strong>7 = Excellent</strong>
-        </p>
+        <button onclick="showPage(1)">
+            Back
+        </button>
 
-
-        <div
-            id="waiting"
-            class="waiting">
-
-            Waiting for all students
-            to submit their research questions...
-
-        </div>
-
-
-        <div
-            id="ratingContainer"
-            style="display:none">
-
-        </div>
-
-
-        <div class="nav">
-
-            <button
-                onclick="showPage(1)">
-
-                Back
-
-            </button>
-
-
-            <button
-                id="reloadButton"
+        <button id="reloadButton"
                 onclick="checkQuestions()">
 
-                Check for Questions
+            Check for Questions
 
-            </button>
+        </button>
 
-
-            <button
-                id="submitRatingsButton"
-                onclick="saveRatings()"
+        <button id="submitSelectionButton"
+                onclick="saveSelection()"
                 style="display:none">
 
-                Submit Ratings
+            Submit Selection
 
-            </button>
+        </button>
 
-        </div>
+    </div>
 
-    </section>
+</section>
 
 
 
