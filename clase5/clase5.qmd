@@ -1,0 +1,268 @@
+---
+title: "De los conceptos a los <span style='color: #e67e22;'>Indicadores</span>"
+subtitle: "Operacionalización de conceptos: definición, dimensiones, indicadores y escalas de medición"
+format:
+  revealjs:
+    theme: simple
+    logo: logo.png
+    footer: "Mauricio Apablaza - Quinta clase - Operacionalización de conceptos"
+    css: styles.css
+    center: true
+---
+
+
+## El [encargo]{style="color: #e67e22;"} de hoy
+
+Al final de la sesión, cada uno tendrá una **matriz de operacionalización** para las dos variables centrales de su abstract.
+
+:::: {.columns}
+::: {.column width="50%"}
+**Qué contiene**
+
+- Definición conceptual con fuente
+- Dos a cuatro dimensiones
+- Al menos un indicador por dimensión
+- Escala de medición y fuente de datos
+:::
+
+::: {.column width="50%"}
+**Para qué sirve**
+
+- Hace verificable su hipótesis
+- Lo obliga a justificar qué mide y qué excluye
+- Es el borrador de la sección *Datos y variables* de su paper
+:::
+::::
+
+## Cómo [trabajaremos]{style="color: #e67e22;"}
+
+:::: {.columns}
+::: {.column width="25%" .fragment}
+**Explicar**
+
+Qué se pide y por qué.
+:::
+
+::: {.column width="25%" .fragment}
+**Modelar**
+
+Ejemplos sólidos y débiles.
+:::
+
+::: {.column width="25%" .fragment}
+**Escribir**
+
+Ejercicios breves en clase.
+:::
+
+::: {.column width="25%" .fragment}
+**Revisar**
+
+Revisión entre pares.
+:::
+::::
+
+. . .
+
+Esta secuencia sigue la propuesta de HarvardWrites (Harvard College Writing Program, s.f.) para enseñar con escritura.
+
+# Parte 1: el [problema]{style="color: #e67e22;"}
+
+## Conceptos [abstractos]{style="color: #e67e22;"}
+
+Hasta ahora hemos hablado de relaciones entre conceptos relativamente abstractos.
+
+> *"La educación aumenta la probabilidad de tener un empleo formal."*
+
+. . .
+
+¿Qué entendemos por educación?
+
+- Inteligencia
+- Habilidades
+- Conocimiento
+- Credenciales
+
+. . .
+
+Cada lectura produce una hipótesis distinta y, posiblemente, un resultado distinto.
+
+## Un concepto, muchas [mediciones]{style="color: #e67e22;"} {.smaller}
+
+| Concepto | Indicador posible | Qué captura | Qué deja fuera |
+|:--|:--|:--|:--|
+| Inteligencia | Test de coeficiente intelectual | Capacidad cognitiva en una prueba estandarizada | Habilidades socioemocionales |
+| Habilidades | Puntaje en prueba de admisión (PAA, PSU, PAES) | Desempeño al egreso escolar | Aprendizaje posterior |
+| Conocimiento | Años de escolaridad | Exposición al sistema educativo | Calidad de la educación |
+| Credenciales | Título más alto obtenido | Señal para el empleador | Lo aprendido fuera del sistema formal |
+
+. . .
+
+La medición también innova. Martinez (2022) usa la luminosidad nocturna captada por satélites para evaluar si los regímenes autoritarios inflan sus cifras de crecimiento del PIB.
+
+## ¿Qué es [operacionalizar]{style="color: #e67e22;"}?
+
+Operacionalizar es el procedimiento por el cual un concepto teórico se traduce en **indicadores observables**, con reglas explícitas para asignar un valor a cada unidad de análisis.
+
+. . .
+
+Las variables deben llevarse a sus referentes empíricos. Sin ese paso, la hipótesis no se puede contrastar con datos.
+
+. . .
+
+Incluso si usted ya tiene su variable definida, debe conocer las alternativas y saber por qué las excluyó.
+
+# Parte 2: los cuatro [pasos]{style="color: #e67e22;"}
+
+## Paso 1: definición [conceptual]{style="color: #e67e22;"}
+
+Una buena definición identifica los atributos del concepto, lo distingue de conceptos cercanos y cita una fuente.
+
+. . .
+
+:::: {.columns}
+::: {.column width="50%"}
+**Débil**
+
+"La informalidad laboral es trabajar de manera informal."
+
+Es circular. No dice qué atributo observar.
+:::
+
+::: {.column width="50%"}
+**Sólida**
+
+Empleo informal: relación laboral que, en la ley o en la práctica, no está sujeta a la legislación laboral, al impuesto a la renta ni a la protección social (OIT, 2003).
+
+Indica qué observar: contrato, cotizaciones, registro.
+:::
+::::
+
+## Paso 2: [dimensiones]{style="color: #e67e22;"}
+
+Las dimensiones son los componentes del concepto. Responden a la pregunta: **¿de qué partes está hecho X?**
+
+. . .
+
+- Deben derivarse de la definición conceptual, no de los datos disponibles.
+- No deben superponerse entre sí.
+- Juntas deben cubrir la definición.
+
+. . .
+
+Cuidado con el **estiramiento conceptual** (Sartori, 1970). Si amplía el concepto para que abarque más casos, pierde precisión sobre lo que significa.
+
+## Paso 3: [indicadores]{style="color: #e67e22;"}
+
+Un indicador es una observación concreta que revela el estado de una dimensión en una unidad de análisis.
+
+. . .
+
+Para cada indicador, declare:
+
+- **Qué** se observa (pregunta de encuesta, registro administrativo, imagen satelital)
+- **En quién** se observa (persona, hogar, comuna, país)
+- **Cuándo** y con qué **fuente** (por ejemplo, CASEN 2022)
+- **Umbral**, si el indicador se transforma en una privación o categoría
+
+## Paso 4: escalas de [medición]{style="color: #e67e22;"} {.smaller}
+
+| Escala | Propiedad | Ejemplo | Implicancia para el análisis |
+|:--|:--|:--|:--|
+| Nominal | Categorías sin orden | Región, sexo | Proporciones, modelos logit multinomial |
+| Ordinal | Orden sin distancia fija | Nivel educacional, escala Likert | Medianas, logit ordenado |
+| Intervalo | Distancias iguales, cero arbitrario | Temperatura en °C | Medias y diferencias |
+| Razón | Cero absoluto | Ingreso, años de escolaridad | Todas las operaciones, incluidos cocientes |
+
+Fuente de la clasificación: Stevens (1946).
+
+. . .
+
+Recuerde también la distinción del curso: variables **cualitativas** (dicotómicas o policotómicas) y **cuantitativas** (continuas, como la estatura, o discretas, como el número de hijos). La escala que declara determina el estimador que puede usar.
+
+## Criterios de [calidad]{style="color: #e67e22;"}
+
+- **Validez:** el indicador mide el concepto que usted declara, no otro.
+- **Confiabilidad:** la misma medición repetida produce el mismo resultado.
+- **Comparabilidad:** el indicador significa lo mismo entre grupos, países o años.
+- **Disponibilidad:** existe una fuente con cobertura suficiente para su unidad de análisis.
+
+. . .
+
+Uno de los grandes avances de la ciencia de datos es medir lo que antes parecía imposible de medir. Esas mediciones están siempre sujetas a crítica, por lo que deben documentarse.
+
+## Errores [frecuentes]{style="color: #e67e22;"}
+
+- Definición circular o sin fuente
+- Indicador sustituto (*proxy*) sin justificar qué captura
+- Una sola dimensión cuando la teoría indica varias
+- Confundir la variable con la fuente: "mi variable es la CASEN"
+- Tratar una escala Likert como variable de razón sin justificarlo
+- Medir la variable dependiente con un componente de la independiente, lo que produce una asociación mecánica
+
+## Operacionalización e [hipótesis]{style="color: #e67e22;"}
+
+Una hipótesis es una explicación tentativa de la relación entre dos o más **cosas que se pueden medir**.
+
+. . .
+
+:::: {.columns}
+::: {.column width="50%"}
+**Hipótesis conceptual**
+
+La educación aumenta la formalidad laboral.
+:::
+
+::: {.column width="50%"}
+**Hipótesis operacional**
+
+Entre ocupados de 25 a 64 años, cada año adicional de escolaridad se asocia con una mayor probabilidad de cotizar en el sistema de pensiones (CASEN 2022).
+:::
+::::
+
+. . .
+
+Use *asociación* cuando no identifica el estadístico, y *correlación* solo en sentido estadístico. Correlación no implica causalidad.
+
+# Parte 4: [manos]{style="color: #e67e22;"} a la obra
+
+## Actividad 1: escritura [breve]{style="color: #e67e22;"} (10 min)
+
+Tome un concepto central y escriba:
+
+1. Una definición conceptual de máximo 60 palabras, con una fuente.
+2. Una oración que diga qué **excluye** su definición.
+3. Una oración que diga con qué concepto cercano **no** debe confundirse.
+
+. . .
+
+
+## Actividad 2: su [matriz]{style="color: #e67e22;"} (25 min) {.smaller}
+
+Complete la matriz para su variable dependiente y su variable independiente principal.
+
+| Variable | Definición conceptual | Dimensión | Indicador | Escala | Fuente y año | Unidad de análisis |
+|:--|:--|:--|:--|:--|:--|:--|
+
+Agregue una fila final: **alternativas descartadas y por qué.**
+
+
+## [Bibliografía]{style="color: #e67e22;"} {.smaller}
+
+Adcock, R., & Collier, D. (2001). Measurement validity: A shared standard for qualitative and quantitative research. *American Political Science Review, 95*(3), 529-546.
+
+Alkire, S., & Foster, J. (2011). Counting and multidimensional poverty measurement. *Journal of Public Economics, 95*(7-8), 476-487.
+
+Booth, W. C., Colomb, G. G., & Williams, J. M. (2008). *The craft of research* (3rd ed.). University of Chicago Press.
+
+Harvard College Writing Program. (s.f.). *HarvardWrites instructor toolkit: Teaching with writing*. Harvard University.
+
+Hernández Sampieri, R., Fernández Collado, C., & Baptista Lucio, P. (2014). *Metodología de la investigación* (6a ed.). McGraw-Hill.
+
+Martinez, L. R. (2022). How much should we trust the dictator's GDP growth estimates? *Journal of Political Economy, 130*(10), 2731-2769.
+
+Organización Internacional del Trabajo. (2003). *Directrices sobre una definición estadística de empleo informal*. Decimoséptima Conferencia Internacional de Estadísticos del Trabajo.
+
+Sartori, G. (1970). Concept misformation in comparative politics. *American Political Science Review, 64*(4), 1033-1053.
+
+Stevens, S. S. (1946). On the theory of scales of measurement. *Science, 103*(2684), 677-680.
